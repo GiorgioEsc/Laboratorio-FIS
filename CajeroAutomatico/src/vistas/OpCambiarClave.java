@@ -52,7 +52,6 @@ public class OpCambiarClave extends javax.swing.JFrame {
         getContentPane().setLayout(null);
 
         cambiarClave.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 20)); // NOI18N
-        cambiarClave.setText("OK");
         cambiarClave.setBorder(null);
         cambiarClave.setContentAreaFilled(false);
         getContentPane().add(cambiarClave);

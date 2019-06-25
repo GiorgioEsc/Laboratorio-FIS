@@ -46,6 +46,7 @@ public class ContrVistaInicial implements ActionListener {
         vistaInicial.getNum4().addActionListener(this);
         vistaInicial.getNum5().addActionListener(this);
         vistaInicial.getNum6().addActionListener(this);
+        vistaInicial.getNum7().addActionListener(this);
         vistaInicial.getNum8().addActionListener(this);
         vistaInicial.getNum9().addActionListener(this);
         vistaInicial.setTitle("Interfaz Inicial");
@@ -67,9 +68,9 @@ public class ContrVistaInicial implements ActionListener {
                     this.vistaInicial.setRespuesta("ACEPTADA, PROCESANDO...");
                     this.vistaInicial.getRespuesta2().setVisible(false);
                     this.vistaInicial.getRespuesta().setVisible(true);
-                    
+
                     this.vistaInicial.repaint();
-                   this.vistaInicial.getRespuesta().paintImmediately(this.vistaInicial.getRespuesta().getVisibleRect());
+                    this.vistaInicial.getRespuesta().paintImmediately(this.vistaInicial.getRespuesta().getVisibleRect());
                     modeloConexion.obtenerDatosCliente(modeloCliente, modeloCliente.getIdUsuario());
                     Thread.sleep(2000);
                     vistaInicial.setVisible(false);
@@ -77,28 +78,28 @@ public class ContrVistaInicial implements ActionListener {
                     ContrElegirOp contrElegirOp = new ContrElegirOp(vistaElegirOperacion, modeloConexion, modeloTarjetaDeb, modeloCajeroAuto, modeloCliente, modeloCuenta);
                     contrElegirOp.iniciarVista();
                 } else if (modeloTarjetaDeb.getIdTarjeta() != idTarjeta) {
-                     vistaInicial.getRespuesta2().setText("TARJETA INVALIDA");
-                     vistaInicial.getRespuesta2().setBackground(Color.red);
+                    vistaInicial.getRespuesta2().setText("TARJETA INVALIDA");
+                    vistaInicial.getRespuesta2().setBackground(Color.red);
                     vistaInicial.getRespuesta2().setVisible(true);
-                    
+
                     vistaInicial.repaint();
-                   vistaInicial.getRespuesta2().paintImmediately(this.vistaInicial.getRespuesta2().getVisibleRect());
+                    vistaInicial.getRespuesta2().paintImmediately(this.vistaInicial.getRespuesta2().getVisibleRect());
                 } else {
                     vistaInicial.getRespuesta2().setText("TARJETA INVALIDA");
-                     vistaInicial.getRespuesta2().setBackground(Color.red);
+                    vistaInicial.getRespuesta2().setBackground(Color.red);
                     vistaInicial.getRespuesta2().setVisible(true);
-                    
+
                     vistaInicial.repaint();
-                   vistaInicial.getRespuesta2().paintImmediately(this.vistaInicial.getRespuesta2().getVisibleRect());
+                    vistaInicial.getRespuesta2().paintImmediately(this.vistaInicial.getRespuesta2().getVisibleRect());
                 }
             } catch (NumberFormatException e) {
-                
+
                 vistaInicial.getRespuesta2().setText("Entrada Inválida. Solo números");
-                     vistaInicial.getRespuesta2().setBackground(Color.red);
-                    vistaInicial.getRespuesta2().setVisible(true);
-                    
-                    vistaInicial.repaint();
-                   vistaInicial.getRespuesta2().paintImmediately(this.vistaInicial.getRespuesta2().getVisibleRect());
+                vistaInicial.getRespuesta2().setBackground(Color.red);
+                vistaInicial.getRespuesta2().setVisible(true);
+
+                vistaInicial.repaint();
+                vistaInicial.getRespuesta2().paintImmediately(this.vistaInicial.getRespuesta2().getVisibleRect());
             } catch (InterruptedException ex) {
                 Logger.getLogger(ContrVistaInicial.class.getName()).log(Level.SEVERE, null, ex);
             }
@@ -148,8 +149,7 @@ public class ContrVistaInicial implements ActionListener {
         } else if (vistaInicial.getNum9() == evento.getSource()) {
             String s = vistaInicial.getIdTarjetaCliente().getText();
             vistaInicial.getIdTarjetaCliente().setText(s + "9");
-            
-            
+
         } else if (vistaInicial.getClear() == evento.getSource()) {
             vistaInicial.getRespuesta().setVisible(false);
             vistaInicial.getRespuesta2().setVisible(false);

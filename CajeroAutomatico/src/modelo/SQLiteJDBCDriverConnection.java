@@ -14,7 +14,7 @@ public class SQLiteJDBCDriverConnection {
 
     Connection conn = null;
     Statement stmt = null;
-    String url = "jdbc:sqlite:C:\\Users\\user\\Documents\\2019\\FIS\\CajeroAutomatico\\baseDatosBancaria.db";
+    String url = "jdbc:sqlite:C:\\Users\\estudiantes\\Downloads\\Laboratorio-FIS-master\\CajeroAutomatico\\baseDatosBancaria.db";
     
 
     public void obtenerDatosTarDebCuenta(TarjetaDebito tarjetaDeb, int idTarjeta, Cuenta cuenta) {

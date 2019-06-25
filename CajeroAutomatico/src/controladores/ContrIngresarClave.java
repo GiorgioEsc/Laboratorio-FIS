@@ -45,7 +45,7 @@ public class ContrIngresarClave implements ActionListener {
         vistaIngresarClave.setTitle("Ingresar Clave");
         vistaIngresarClave.pack();
         vistaIngresarClave.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        vistaIngresarClave.setSize(750, 850);
+        vistaIngresarClave.setSize(750, 680);
         vistaIngresarClave.setLocationRelativeTo(null);
         vistaIngresarClave.setVisible(true);
 

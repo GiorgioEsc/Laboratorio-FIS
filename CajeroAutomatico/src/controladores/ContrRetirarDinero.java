@@ -54,7 +54,7 @@ public class ContrRetirarDinero implements ActionListener {
         vistaRetirarDinero.setTitle("Retiro en Efectivo");
         vistaRetirarDinero.pack();
         vistaRetirarDinero.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        vistaRetirarDinero.setSize(750, 850);
+        vistaRetirarDinero.setSize(750, 680);
         vistaRetirarDinero.setLocationRelativeTo(null);
         vistaRetirarDinero.setVisible(true);
     }
@@ -74,14 +74,14 @@ public class ContrRetirarDinero implements ActionListener {
             } else if (dineroEnCuenta < 50000) {
 
                 vistaRetirarDinero.getLblRespuesta().setText("SALDO INSUFICIENTE");
-                    vistaRetirarDinero.getLblRespuesta().setForeground(Color.red);
-                    vistaRetirarDinero.getLblRespuesta().paintImmediately(this.vistaRetirarDinero.getLblRespuesta().getVisibleRect());
-                    
+                vistaRetirarDinero.getLblRespuesta().setForeground(Color.red);
+                vistaRetirarDinero.getLblRespuesta().paintImmediately(this.vistaRetirarDinero.getLblRespuesta().getVisibleRect());
+
             } else if (dineroEnCajero < 50000) {
                 vistaRetirarDinero.getLblRespuesta().setText("CAJERO SIN RESERVAS");
-                    vistaRetirarDinero.getLblRespuesta().setForeground(Color.red);
-                    vistaRetirarDinero.getLblRespuesta().paintImmediately(this.vistaRetirarDinero.getLblRespuesta().getVisibleRect());
-                    
+                vistaRetirarDinero.getLblRespuesta().setForeground(Color.red);
+                vistaRetirarDinero.getLblRespuesta().paintImmediately(this.vistaRetirarDinero.getLblRespuesta().getVisibleRect());
+
             }
         } else if (vistaRetirarDinero.getCien() == evento.getSource()) {
             if ((dineroEnCuenta >= 100000) && (dineroEnCajero >= 100000)) {
@@ -92,14 +92,14 @@ public class ContrRetirarDinero implements ActionListener {
                 contrIngresarClave.iniciarVista();
             } else if (dineroEnCuenta < 100000) {
                 vistaRetirarDinero.getLblRespuesta().setText("SALDO INSUFICIENTE");
-                    vistaRetirarDinero.getLblRespuesta().setForeground(Color.red);
-                    vistaRetirarDinero.getLblRespuesta().paintImmediately(this.vistaRetirarDinero.getLblRespuesta().getVisibleRect());
-                    
+                vistaRetirarDinero.getLblRespuesta().setForeground(Color.red);
+                vistaRetirarDinero.getLblRespuesta().paintImmediately(this.vistaRetirarDinero.getLblRespuesta().getVisibleRect());
+
             } else if (dineroEnCajero < 100000) {
                 vistaRetirarDinero.getLblRespuesta().setText("CAJERO SIN RESERVAS");
-                    vistaRetirarDinero.getLblRespuesta().setForeground(Color.red);
-                    vistaRetirarDinero.getLblRespuesta().paintImmediately(this.vistaRetirarDinero.getLblRespuesta().getVisibleRect());
-                    
+                vistaRetirarDinero.getLblRespuesta().setForeground(Color.red);
+                vistaRetirarDinero.getLblRespuesta().paintImmediately(this.vistaRetirarDinero.getLblRespuesta().getVisibleRect());
+
             }
         } else if (vistaRetirarDinero.getDoscientos() == evento.getSource()) {
             if ((dineroEnCuenta >= 200000) && (dineroEnCajero >= 200000)) {
@@ -110,14 +110,14 @@ public class ContrRetirarDinero implements ActionListener {
                 contrIngresarClave.iniciarVista();
             } else if (dineroEnCuenta < 200000) {
                 vistaRetirarDinero.getLblRespuesta().setText("SALDO INSUFICIENTE");
-                    vistaRetirarDinero.getLblRespuesta().setForeground(Color.red);
-                    vistaRetirarDinero.getLblRespuesta().paintImmediately(this.vistaRetirarDinero.getLblRespuesta().getVisibleRect());
-                    
+                vistaRetirarDinero.getLblRespuesta().setForeground(Color.red);
+                vistaRetirarDinero.getLblRespuesta().paintImmediately(this.vistaRetirarDinero.getLblRespuesta().getVisibleRect());
+
             } else if (dineroEnCajero < 200000) {
                 vistaRetirarDinero.getLblRespuesta().setText("CAJERO SIN RESERVAS");
-                    vistaRetirarDinero.getLblRespuesta().setForeground(Color.red);
-                    vistaRetirarDinero.getLblRespuesta().paintImmediately(this.vistaRetirarDinero.getLblRespuesta().getVisibleRect());
-                    
+                vistaRetirarDinero.getLblRespuesta().setForeground(Color.red);
+                vistaRetirarDinero.getLblRespuesta().paintImmediately(this.vistaRetirarDinero.getLblRespuesta().getVisibleRect());
+
             }
         } else if (vistaRetirarDinero.getQuinientos() == evento.getSource()) {
             if ((dineroEnCuenta >= 500000) && (dineroEnCajero >= 500000)) {
@@ -127,17 +127,18 @@ public class ContrRetirarDinero implements ActionListener {
                 contrIngresarClave.iniciarVista();
             } else if (dineroEnCuenta < 500000) {
                 vistaRetirarDinero.getLblRespuesta().setText("SALDO INSUFICIENTE");
-                    vistaRetirarDinero.getLblRespuesta().setForeground(Color.red);
-                    vistaRetirarDinero.getLblRespuesta().paintImmediately(this.vistaRetirarDinero.getLblRespuesta().getVisibleRect());
-                    
+                vistaRetirarDinero.getLblRespuesta().setForeground(Color.red);
+                vistaRetirarDinero.getLblRespuesta().paintImmediately(this.vistaRetirarDinero.getLblRespuesta().getVisibleRect());
+
             } else if (dineroEnCajero < 500000) {
                 vistaRetirarDinero.getLblRespuesta().setText("CAJERO SIN RESERVAS");
-                    vistaRetirarDinero.getLblRespuesta().setForeground(Color.red);
-                    vistaRetirarDinero.getLblRespuesta().paintImmediately(this.vistaRetirarDinero.getLblRespuesta().getVisibleRect());
-                    
+                vistaRetirarDinero.getLblRespuesta().setForeground(Color.red);
+                vistaRetirarDinero.getLblRespuesta().paintImmediately(this.vistaRetirarDinero.getLblRespuesta().getVisibleRect());
+
             }
         } else if (vistaRetirarDinero.getRetirar() == evento.getSource()) {
             try {
+
                 int introMonto = Integer.parseInt(vistaRetirarDinero.getMontoManual().getText());
                 if ((dineroEnCuenta >= introMonto) && (dineroEnCajero >= introMonto)) {
                     modeloCuenta.setSaldoActual(dineroEnCuenta - introMonto);
@@ -149,20 +150,55 @@ public class ContrRetirarDinero implements ActionListener {
                     vistaRetirarDinero.getLblRespuesta().setText("SALDO INSUFICIENTE");
                     vistaRetirarDinero.getLblRespuesta().setForeground(Color.red);
                     vistaRetirarDinero.getLblRespuesta().paintImmediately(this.vistaRetirarDinero.getLblRespuesta().getVisibleRect());
-                    
+
                 } else if (dineroEnCajero < introMonto) {
                     vistaRetirarDinero.getLblRespuesta().setText("CAJERO SIN RESERVAS");
                     vistaRetirarDinero.getLblRespuesta().setForeground(Color.red);
                     vistaRetirarDinero.getLblRespuesta().paintImmediately(this.vistaRetirarDinero.getLblRespuesta().getVisibleRect());
-                    
-                    
+
                 }
+                
             } catch (NumberFormatException e) {
                 vistaRetirarDinero.getLblRespuesta().setText("SOLO NUMEROS PORFAVOR");
-                    vistaRetirarDinero.getLblRespuesta().setForeground(Color.red);
-                    vistaRetirarDinero.getLblRespuesta().paintImmediately(this.vistaRetirarDinero.getLblRespuesta().getVisibleRect());
-                    
+                vistaRetirarDinero.getLblRespuesta().setForeground(Color.red);
+                vistaRetirarDinero.getLblRespuesta().paintImmediately(this.vistaRetirarDinero.getLblRespuesta().getVisibleRect());
+
             }
-        }
+        }else if (vistaRetirarDinero.getNum0() == evento.getSource()) {
+                    String s = vistaRetirarDinero.getMontoManual().getText();
+                    this.vistaRetirarDinero.getMontoManual().setText(s + "0");
+                    System.out.println("num0");
+                    vistaRetirarDinero.repaint();
+                } else if (vistaRetirarDinero.getNum1() == evento.getSource()) {
+                    String s = vistaRetirarDinero.getMontoManual().getText();
+                    this.vistaRetirarDinero.getMontoManual().setText(s + "1");
+                    System.out.println("num1");
+                } else if (vistaRetirarDinero.getNum2() == evento.getSource()) {
+                    String s = vistaRetirarDinero.getMontoManual().getText();
+                    vistaRetirarDinero.getMontoManual().setText(s + "2");
+                } else if (vistaRetirarDinero.getNum3() == evento.getSource()) {
+                    String s = vistaRetirarDinero.getMontoManual().getText();
+                    vistaRetirarDinero.getMontoManual().setText(s + "3");
+                } else if (vistaRetirarDinero.getNum4() == evento.getSource()) {
+                    String s = vistaRetirarDinero.getMontoManual().getText();
+                    vistaRetirarDinero.getMontoManual().setText(s + "4");
+                } else if (vistaRetirarDinero.getNum5() == evento.getSource()) {
+                    String s = vistaRetirarDinero.getMontoManual().getText();
+                    vistaRetirarDinero.getMontoManual().setText(s + "5");
+                } else if (vistaRetirarDinero.getNum6() == evento.getSource()) {
+                    String s = vistaRetirarDinero.getMontoManual().getText();
+                    vistaRetirarDinero.getMontoManual().setText(s + "6");
+                } else if (vistaRetirarDinero.getNum7() == evento.getSource()) {
+                    String s = vistaRetirarDinero.getMontoManual().getText();
+                    vistaRetirarDinero.getMontoManual().setText(s + "7");
+                } else if (vistaRetirarDinero.getNum8() == evento.getSource()) {
+                    String s = vistaRetirarDinero.getMontoManual().getText();
+                    vistaRetirarDinero.getMontoManual().setText(s + "8");
+                } else if (vistaRetirarDinero.getNum9() == evento.getSource()) {
+                    String s = vistaRetirarDinero.getMontoManual().getText();
+                    vistaRetirarDinero.getMontoManual().setText(s + "9");
+                }
+        //this.vistaRetirarDinero.repaint();
+        //this.vistaRetirarDinero.getMontoManual().paintImmediately(this.vistaRetirarDinero.getMontoManual().getVisibleRect());
     }
 }
