@@ -50,13 +50,12 @@ public class ContrTransferirDinero implements ActionListener {
             
                 montoTrans = Integer.parseInt(vistaTransferirDinero.getMontoManual().getText());
                 nroCuenta = Integer.parseInt(vistaTransferirDinero.getNroCuenta().getText());
-                System.out.println(montoTrans+"        "+nroCuenta);
-                
-//                modeloCuenta.setSaldoActual(dineroEnCuenta - 50000);
-//                vistaTransferirDinero.setVisible(false);
-//
-//                ContrIngresarClave contrIngresarClave = new ContrIngresarClave(vistaIngresarClave, modeloConexion, modeloTarjetaDeb, modeloCajeroAuto, modeloCliente, modeloCuenta);
-//                contrIngresarClave.iniciarVista();
+
+                modeloCuenta.setSaldoActual(dineroEnCuenta - montoTrans);
+                vistaTransferirDinero.setVisible(false);
+
+                ContrIngresarClave contrIngresarClave = new ContrIngresarClave(vistaIngresarClave, modeloConexion, modeloTarjetaDeb, modeloCajeroAuto, modeloCliente, modeloCuenta);
+                contrIngresarClave.iniciarVista();
             
         }  else if (vistaTransferirDinero.getTransferir()== evento.getSource()) {
             try {
