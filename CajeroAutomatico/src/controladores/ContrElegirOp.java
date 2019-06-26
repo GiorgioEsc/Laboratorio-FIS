@@ -71,6 +71,7 @@ public class ContrElegirOp implements ActionListener {
             vistaElegirOperacion.setVisible(false);
         }else if (vistaElegirOperacion.getBtnCancelar() == evento.getSource()) {
             ContrVistaInicial contrVistaInicial = new ContrVistaInicial(vistaInicial, modeloConexion, modeloTarjetaDeb, modeloCajeroAuto, modeloCliente, modeloCuenta);
+            vistaElegirOperacion.setVisible(false);
             contrVistaInicial.iniciarVista();
         }
     }

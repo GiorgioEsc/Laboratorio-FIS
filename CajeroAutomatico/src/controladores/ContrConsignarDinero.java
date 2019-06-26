@@ -39,7 +39,7 @@ public class ContrConsignarDinero implements ActionListener {
         vistaConsignarDinero.setTitle("Consignacion en Efectivo");
         vistaConsignarDinero.pack();
         vistaConsignarDinero.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        vistaConsignarDinero.setSize(750, 850);
+        vistaConsignarDinero.setSize(750, 680);
         vistaConsignarDinero.setLocationRelativeTo(null);
         vistaConsignarDinero.setVisible(true);
     }
@@ -94,5 +94,7 @@ public class ContrConsignarDinero implements ActionListener {
                 JOptionPane.showMessageDialog(null, "Entrada Inválida. Solo Números", "DENEGADO", JOptionPane.ERROR_MESSAGE);
             }
         }
+        
+        
     }
 }

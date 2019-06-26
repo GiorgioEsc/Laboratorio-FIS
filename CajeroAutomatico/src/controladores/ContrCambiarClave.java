@@ -35,7 +35,7 @@ public class ContrCambiarClave implements ActionListener {
         vistaCambiarClave.setTitle("Cambiar Clave");
         vistaCambiarClave.pack();
         vistaCambiarClave.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        vistaCambiarClave.setSize(750, 850);
+        vistaCambiarClave.setSize(750, 680);
         vistaCambiarClave.setLocationRelativeTo(null);
         vistaCambiarClave.setVisible(true);
     }
