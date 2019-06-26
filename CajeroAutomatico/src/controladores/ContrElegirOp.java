@@ -22,6 +22,7 @@ public class ContrElegirOp implements ActionListener {
     IngresarClave vistaIngresarClave = new IngresarClave();
     OpRetirarDinero vistaRetirarDinero = new OpRetirarDinero();
     OpConsignarDinero vistaConsignarDinero = new OpConsignarDinero();
+    OpTransferirDinero vistaTransferirDinero = new OpTransferirDinero();
     private VistaInicial vistaInicial = new VistaInicial();
 
     public ContrElegirOp(ElegirOperacion vistaElegirOperacion, SQLiteJDBCDriverConnection modeloConexion, TarjetaDebito modeloTarjetaDeb, CajeroAutomatico modeloCajeroAuto, Cliente modeloCliente, Cuenta modeloCuenta) {
@@ -39,6 +40,7 @@ public class ContrElegirOp implements ActionListener {
         vistaElegirOperacion.getConsultarSaldo().addActionListener(this);
         vistaElegirOperacion.getRetirarDinero().addActionListener(this);
         vistaElegirOperacion.getBtnCancelar().addActionListener(this);
+        vistaElegirOperacion.getBtnTransferir().addActionListener(this);
         vistaElegirOperacion.setTitle("Selección de Opciones");
         vistaElegirOperacion.pack();
         vistaElegirOperacion.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -63,16 +65,21 @@ public class ContrElegirOp implements ActionListener {
             System.out.println("consigar");
             ContrConsignarDinero contConsignarDinero = new ContrConsignarDinero(vistaConsignarDinero, modeloConexion, modeloTarjetaDeb, modeloCajeroAuto, modeloCliente, modeloCuenta);
             contConsignarDinero.iniciarVista();
-            vistaElegirOperacion.setVisible(false);
-            
+            vistaElegirOperacion.setVisible(false);  
+        } else if (vistaElegirOperacion.getTransferirDinero() == evento.getSource()) {
+            System.out.println("transferir");
+            ContrTransferirDinero contrTransferirDinero = new ContrTransferirDinero(vistaTransferirDinero, modeloConexion, modeloTarjetaDeb, modeloCajeroAuto, modeloCliente, modeloCuenta);
+            contrTransferirDinero.iniciarVista();
+            vistaElegirOperacion.setVisible(false);  
         } else if (vistaElegirOperacion.getRetirarDinero() == evento.getSource()) {
             ContrRetirarDinero contrRetirarDinero = new ContrRetirarDinero(vistaRetirarDinero, modeloConexion, modeloTarjetaDeb, modeloCajeroAuto, modeloCliente, modeloCuenta);
             contrRetirarDinero.iniciarVista();
             vistaElegirOperacion.setVisible(false);
         }else if (vistaElegirOperacion.getBtnCancelar() == evento.getSource()) {
             ContrVistaInicial contrVistaInicial = new ContrVistaInicial(vistaInicial, modeloConexion, modeloTarjetaDeb, modeloCajeroAuto, modeloCliente, modeloCuenta);
-            vistaElegirOperacion.setVisible(false);
             contrVistaInicial.iniciarVista();
+        }else if (vistaElegirOperacion.getBtnTransferir() == evento.getSource()){
+            
         }
     }
 }

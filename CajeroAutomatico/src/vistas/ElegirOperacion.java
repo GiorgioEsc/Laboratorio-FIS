@@ -6,7 +6,6 @@
 package vistas;
 
 import javax.swing.JButton;
-import javax.swing.JLabel;
 
 
 /**
@@ -29,7 +28,11 @@ public class ElegirOperacion extends javax.swing.JFrame {
     public JButton getConsignarDinero() {
         return consignarDinero;
     }
-
+    
+    public JButton getTransferirDinero() {
+        return transferirDinero;
+    }
+    
     public JButton getConsultarSaldo() {
         return consultarSaldo;
     }
@@ -41,6 +44,10 @@ public class ElegirOperacion extends javax.swing.JFrame {
     public JButton getBtnCancelar() {
         return btnCancelar;
     }
+    
+    public JButton getBtnTransferir() {
+        return transferirDinero;
+    }
 
 
     
@@ -49,6 +56,7 @@ public class ElegirOperacion extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        transferirDinero = new javax.swing.JButton();
         consignarDinero = new javax.swing.JButton();
         cambiarClave = new javax.swing.JButton();
         consultarSaldo = new javax.swing.JButton();
@@ -60,11 +68,15 @@ public class ElegirOperacion extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         fondo = new javax.swing.JLabel();
-        btnTransferencia = new javax.swing.JButton();
         btnCancelar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
+
+        transferirDinero.setBorder(null);
+        transferirDinero.setContentAreaFilled(false);
+        getContentPane().add(transferirDinero);
+        transferirDinero.setBounds(30, 240, 50, 30);
 
         consignarDinero.setBorder(null);
         consignarDinero.setContentAreaFilled(false);
@@ -127,10 +139,6 @@ public class ElegirOperacion extends javax.swing.JFrame {
         getContentPane().add(fondo);
         fondo.setBounds(0, 0, 740, 640);
 
-        btnTransferencia.setText("jButton1");
-        getContentPane().add(btnTransferencia);
-        btnTransferencia.setBounds(30, 243, 50, 30);
-
         btnCancelar.setText("jButton2");
         btnCancelar.setContentAreaFilled(false);
         getContentPane().add(btnCancelar);
@@ -141,7 +149,6 @@ public class ElegirOperacion extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnCancelar;
-    private javax.swing.JButton btnTransferencia;
     private javax.swing.JButton cambiarClave;
     private javax.swing.JButton consignarDinero;
     private javax.swing.JButton consultarSaldo;
@@ -153,5 +160,6 @@ public class ElegirOperacion extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JButton retirarDinero;
+    private javax.swing.JButton transferirDinero;
     // End of variables declaration//GEN-END:variables
 }
